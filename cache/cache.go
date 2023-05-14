@@ -39,7 +39,7 @@ func NewMemoryConfig(opts ...MemoryFunc) *MemoryConfig {
 	return conf
 }
 
-// SetMaxMemorySize 设置最大物理内存
+// SetMaxMemorySize 设置最大物理内存(uint: MB)
 func SetMaxMemorySize(hardCacheSize int) MemoryFunc {
 	return func(t *MemoryConfig) {
 		t.HardMaxCacheSize = hardCacheSize

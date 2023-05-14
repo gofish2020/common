@@ -4,6 +4,7 @@ go 1.19
 
 require (
 	github.com/allegro/bigcache/v3 v3.1.0
+	github.com/pierrec/lz4/v4 v4.1.17
 	github.com/redis/go-redis/v9 v9.0.4
 	github.com/robfig/cron/v3 v3.0.0
 	github.com/stretchr/testify v1.8.0

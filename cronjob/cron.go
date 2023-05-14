@@ -11,7 +11,7 @@ type CronTask struct {
 	f    CronFunc
 }
 
-// NewCronTask 创建定时任务
+// NewCronTask 创建定时任务 spec格式: @every 5s
 func NewCronTask(spec string, f CronFunc) CronTask {
 	return CronTask{
 		Spec: spec,

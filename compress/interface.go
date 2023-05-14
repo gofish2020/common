@@ -1,6 +1,6 @@
 package compress
 
-type Compress interface {
-	Marshal(data []byte) ([]byte, error)
-	Unmarshal(data []byte) ([]byte, error)
+type DataCompression interface {
+	Compress(data []byte) ([]byte, error)
+	UnCompress(data []byte) ([]byte, error)
 }

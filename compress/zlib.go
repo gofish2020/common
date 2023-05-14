@@ -9,7 +9,11 @@ import (
 type Zlib struct {
 }
 
-func (t *Zlib) Marshal(data []byte) ([]byte, error) {
+func GetZlibCompresser() Zlib {
+	return Zlib{}
+}
+
+func (t Zlib) Compress(data []byte) ([]byte, error) {
 	var in bytes.Buffer
 	w, err := zlib.NewWriterLevel(&in, zlib.DefaultCompression)
 	if err != nil {
@@ -40,7 +44,7 @@ r, err := zlib.NewReader(&in)
 	fmt.Println(out.String())
 */
 
-func (t *Zlib) Unmarshal(data []byte) ([]byte, error) {
+func (t Zlib) UnCompress(data []byte) ([]byte, error) {
 	var (
 		in  bytes.Buffer
 		out bytes.Buffer

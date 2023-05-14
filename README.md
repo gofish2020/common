@@ -5,7 +5,7 @@ golang develop common kit
 
 
 ## 如何配置ssh连接
-1. 配置本地ssh：
+1. fork自己的项目，配置本地ssh：
 ```
 git config --global user.name "XXX"
 git config --global user.email "xxxx@163.com"

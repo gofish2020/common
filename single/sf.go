@@ -1,4 +1,4 @@
-package signle
+package single
 
 import (
 	"context"
@@ -46,7 +46,5 @@ func (t *AwesomeCache) Get(key string, f InterFunc) (interface{}, error) {
 		}
 		return data, nil // 从singlefight中获取的结果
 	}
-
-	log.Printf("NewAwesomeCache:%+v\n", zap.String("NewAwesomeCache->Get", "get from cache"))
 	return *result, nil
 }
